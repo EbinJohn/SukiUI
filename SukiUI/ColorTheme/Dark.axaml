@@ -24,5 +24,19 @@
         <BoxShadows x:Key="SukiLowShadow">0 0 3 0 #353535</BoxShadows>
         <BoxShadows x:Key="SukiSwitchShadow">0 1 5 0 #555555</BoxShadows>
         <BoxShadows x:Key="SukiPopupShadow">1 1 5 0 #404040</BoxShadows>
+
+
+
+		<Color x:Key="Grey100">#FAF9F8</Color>
+		<Color x:Key="Grey200">#F3F2F1</Color>
+		<Color x:Key="Grey300">#EDEBE9</Color>
+		<Color x:Key="Grey400">#D2D0CE</Color>
+		<Color x:Key="Grey500">#C8C6C4</Color>
+		<Color x:Key="Grey600">#A19F9D</Color>
+		<Color x:Key="Grey700">#605E5C</Color>
+		<Color x:Key="Grey800">#3B3A39</Color>
+		<Color x:Key="Grey900">#323130</Color>
+		
+		
     </Style.Resources>
 </Style>
