@@ -18,14 +18,14 @@
         <Color x:Key="SukiBorderBrush">#353535</Color>
         <Color x:Key="SukiControlBorderBrush">#606060</Color>
         <Color x:Key="SukiMediumBorderBrush">#555555</Color>
+        <Color x:Key="SukiIntBorderBrush">#55515171</Color>
         <Color x:Key="SukiLightBorderBrush">#454545</Color>
         <Color x:Key="SukiDialogBackground">#505050</Color>
 
         <BoxShadows x:Key="SukiLowShadow">0 0 3 0 #353535</BoxShadows>
         <BoxShadows x:Key="SukiSwitchShadow">0 1 5 0 #555555</BoxShadows>
         <BoxShadows x:Key="SukiPopupShadow">1 1 5 0 #404040</BoxShadows>
-
-
+        <BoxShadows x:Key="SukiBigPopupShadow">1 1 15 0 #606060</BoxShadows>
 
 		<Color x:Key="Grey100">#FAF9F8</Color>
 		<Color x:Key="Grey200">#F3F2F1</Color>
@@ -36,7 +36,5 @@
 		<Color x:Key="Grey700">#605E5C</Color>
 		<Color x:Key="Grey800">#3B3A39</Color>
 		<Color x:Key="Grey900">#323130</Color>
-		
-		
     </Style.Resources>
 </Style>
