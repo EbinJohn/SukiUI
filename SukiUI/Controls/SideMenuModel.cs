@@ -26,14 +26,17 @@ namespace SukiUI.Controls
     {
         public SideMenuModel()
         {
-            Task.Run(() =>
+            if (MenuItems.Count > 0)
             {
-                // Not proud of this but here we go
-                Thread.Sleep(1500);
-                ChangePage(MenuItems.First().Content);
-            });
+                Task.Run(() =>
+                {
+                    // Not proud of this but here we go
+                    Thread.Sleep(1500);
+                    ChangePage(MenuItems.First().Content);
+                });
+            }
         }
-        
+
         private bool menuvisibility = true;
 
         public bool MenuVisibility
@@ -76,7 +79,7 @@ namespace SukiUI.Controls
             set
             {
                 this.RaiseAndSetIfChanged(ref menuItems, value);
-                
+
             }
         }
 
