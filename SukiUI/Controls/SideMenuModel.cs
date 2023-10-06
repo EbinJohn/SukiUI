@@ -15,7 +15,7 @@ namespace SukiUI.Controls
     public class SideMenuItem
     {
         public string Header { get; set; } = default;
-        public object Icon { get; set; } = new Border();
+        public MaterialIconKind Icon { get; set; } = MaterialIconKind.Circle;
 
         public object Content { get; set; } = new Grid();
 
