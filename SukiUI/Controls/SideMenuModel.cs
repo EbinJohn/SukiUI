@@ -26,15 +26,7 @@ namespace SukiUI.Controls
     {
         public SideMenuModel()
         {
-            if (MenuItems.Count > 0)
-            {
-                Task.Run(() =>
-                {
-                    // Not proud of this but here we go
-                    Thread.Sleep(1500);
-                    ChangePage(MenuItems.First().Content);
-                });
-            }
+
         }
 
         private bool menuvisibility = true;

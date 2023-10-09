@@ -16,7 +16,7 @@ namespace SukiUI.Controls
     {
         public delegate void MenuItemChangedEventHandler(object sender, string header);
         public event MenuItemChangedEventHandler MenuItemChanged;
-        
+
         public static readonly StyledProperty<bool> WinUIStyleProperty = AvaloniaProperty.Register<SideMenu, bool>(nameof(WinUIStyle), defaultValue: false);
 
         public bool WinUIStyle
@@ -27,17 +27,19 @@ namespace SukiUI.Controls
                 SetValue(WinUIStyleProperty, value);
                 if (!value)
                     return;
-                
+
                 var border = this.FindControl<Border>("ContentBorder");
-                border.BorderThickness = new Thickness(1,1,0,0);
-                border.CornerRadius = new CornerRadius(13, 0, 0,0);
-                
+                border.BorderThickness = new Thickness(1, 1, 0, 0);
+                border.CornerRadius = new CornerRadius(13, 0, 0, 0);
+
 
             }
         }
         public SideMenu()
         {
             InitializeComponent();
+
+            this.AttachedToVisualTree += OnVisualyAttached;
         }
 
         private void InitializeComponent()
@@ -59,7 +61,18 @@ namespace SukiUI.Controls
             {
                 string header = ((TextBlock)((DockPanel)((Grid)rButton.Content).Children.First()).Children.Last()).Text;
                 MenuItemChanged?.Invoke(this, header);
-            }catch(Exception exc){}
+            }
+            catch (Exception exc) { }
+        }
+
+        private void OnVisualyAttached(object sender, VisualTreeAttachmentEventArgs args)
+        {
+            SideMenuModel viewModel = (SideMenuModel)this.DataContext;
+
+            if (viewModel != null)
+            {
+                viewModel.ChangePage(viewModel.MenuItems.First().Content);
+            }
         }
     }
 }
