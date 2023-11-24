@@ -12,7 +12,8 @@
         <Color x:Key="SukiPrimaryColorGradient">#597ef7</Color>
 
 
-        <Color x:Key="SukiBackground">#fafafa</Color>
+        <Color x:Key="SukiBackground">#fcfcfc</Color>
+        <Color x:Key="SukiCardBackground">#fdfdfd</Color>
         <Color x:Key="SukiLightBackground">#f9f9f9</Color>
         <Color x:Key="SukiLightColoredBackground">#E7EFFF</Color>
         <Color x:Key="SukiStrongBackground">#eaeaea</Color>
@@ -24,7 +25,7 @@
         <Color x:Key="SukiControlTouchBackground">#FFFFFF</Color>
         <Color x:Key="SukiMediumBorderBrush">#e2e2e2</Color>
         <Color x:Key="SukiIntBorderBrush">#EEEEF9</Color>
-        <Color x:Key="SukiLightIntBorderBrush">#aaf2f2fc</Color>
+        <Color x:Key="SukiLightIntBorderBrush">#77f2f2fc</Color>
         <Color x:Key="SukiLightBorderBrush">#f4f4f4</Color>
         <Color x:Key="SukiDialogBackground">Gray</Color>
 
@@ -34,15 +35,6 @@
         <BoxShadows x:Key="SukiBigPopupShadow">1 1 15 0 #dedede</BoxShadows>
 
 
-		<Color x:Key="Grey100">#FAF9F8</Color>
-		<Color x:Key="Grey200">#F3F2F1</Color>
-		<Color x:Key="Grey300">#EDEBE9</Color>
-		<Color x:Key="Grey400">#D2D0CE</Color>
-		<Color x:Key="Grey500">#C8C6C4</Color>
-		<Color x:Key="Grey600">#A19F9D</Color>
-		<Color x:Key="Grey700">#605E5C</Color>
-		<Color x:Key="Grey800">#3B3A39</Color>
-		<Color x:Key="Grey900">#323130</Color>
 
 
     </Style.Resources>

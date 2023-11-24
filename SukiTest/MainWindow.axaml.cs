@@ -19,6 +19,7 @@ using System.Threading;
 using Avalonia.Controls.Primitives;
 using Avalonia.Threading;
 using SukiUI.Controls.TouchInput.TouchNumericPad;
+using SukiUI.Theme;
 
 namespace SukiTest
 {
@@ -225,16 +226,17 @@ namespace SukiTest
 
         private void SetBusy(object? sender, RoutedEventArgs e)
         {
-            this.FindControl<BusyArea>("BusySignIn").IsBusy = true;
-
+           
+            this.Get<Button>("ButtonSignIn").ShowProgress();
+            
             Task.Run(() =>
             {
                 Thread.Sleep(3000);
                 Dispatcher.UIThread.Invoke(() =>
                 {
-                    this.FindControl<BusyArea>("BusySignIn").IsBusy = false;
-                    InteractiveContainer.ShowToast(new TextBlock(){Text = "Success !", Margin = new Thickness(15,8)}, 5);
-
+                   
+                    this.Get<TextBox>("PasswordTextBox").Error("Wrong Password");
+                    this.Get<Button>("ButtonSignIn").HideProgress();
                 });
             });
         }
